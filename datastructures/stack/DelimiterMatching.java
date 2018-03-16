@@ -1,6 +1,8 @@
 package datastructures.stack;
 
 public class DelimeterMatching {
+    
+    // method to find : is delimeter is matching or not
 
     public static void main(String[] args) {
 
@@ -8,6 +10,8 @@ public class DelimeterMatching {
     }
 }
 
+
+// implementation of stack
 class StackImpli{
 
     private int size;
