@@ -1,7 +1,5 @@
 package datastructures.linkedlist;
 
-import org.w3c.dom.NodeList;
-
 public class SinglyLinkedList {
 
     // class to represent linkedlist Node
