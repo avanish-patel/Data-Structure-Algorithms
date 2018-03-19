@@ -35,5 +35,8 @@ public class DecimalToBinary {
 
         decimalToBinary(7);
 
+        System.out.println();
+        decimalToBinary(125);
+
     }
 }
