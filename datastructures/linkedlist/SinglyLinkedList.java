@@ -111,6 +111,49 @@ public class SinglyLinkedList {
         previous.next = newNode;
     }
 
+    // insert node at any position
+
+    private static ListNode insertAtPosition(ListNode head, int data, int position) {
+
+        int size = getLength(head);
+
+        if (position > size+1 || position < 1) {
+
+            System.out.println("Invalid Position");
+
+            return head;
+        }
+
+        ListNode newNode = new ListNode(data);
+
+        if (position == 1) {
+
+            newNode.next = head;
+
+            return head;
+        }else {
+
+            ListNode previous = head;
+
+            int count = 1;
+
+            while (count < position - 1) {
+
+                previous = previous.next;
+
+                count++;
+            }
+
+            ListNode current = previous.next;
+
+            newNode.next = current;
+
+            previous.next = newNode;
+
+            return head;
+        }
+    }
+
     // main method
     public static void main(String[] args) {
 
@@ -155,5 +198,11 @@ public class SinglyLinkedList {
         System.out.println("Inserting 99 after second node : ");
         insertAfter(second, 99);
         printList(head);
+
+        // inserting new node at position 3
+
+        System.out.println();
+        System.out.println("Inserting node 22 at position 3");
+        printList(insertAtPosition(head,22,3));
     }
 }
